@@ -8,6 +8,13 @@ const app = express()
 
 app.use(express.json())
 
+app.use(cors())
+app.use(cors({
+    origin:'http://localhost:3000',
+    methoods:['POST', 'DELETE', 'PUT', 'GET'],
+    allowedHeaders: ['Content-Type']
+}))
+
 app.get('/', (request, response) => {
     response.send("Hello")
 })
