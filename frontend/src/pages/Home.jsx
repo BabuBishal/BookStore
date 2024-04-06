@@ -33,15 +33,15 @@ const Home = () => {
                 <button className="bg-sky-300 hover:bg-sky-600 px-4 py-1 rounded-lg"
                     onClick={() => setShowType('card')}>Card</button>
             </div>
-         <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center">
                 <h1 className="text-3xl my-8">Books List</h1>
                 <Link to='/books/create'>
                     <MdOutlineAddBox className="text-sky-800 text-4xl" />
                 </Link>
             </div>
-            {loading ? 
+            {loading ?
                 <Spinner /> : showType === 'table' ?
-             ( <BooksTable books={books} /> ) : (<BooksCard books={books} />)
+                    (<BooksTable books={books} />) : (<BooksCard books={books} />)
             }
         </div>
     )
