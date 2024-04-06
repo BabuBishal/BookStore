@@ -38,7 +38,7 @@ const Home = () => {
                 <table className="w-full border-separated border-spacing-2">
                     <thead>
                         <tr>
-                            <th className="border border-slate-600 rounded-md" >NO</th>
+                            <th className="border border-slate-600 rounded-md" >No.</th>
                             <th className="border border-slate-600 rounded-md" >Title</th>
                             <th className="border border-slate-600 rounded-md max-md:hidden">Author</th>
                             <th className="border border-slate-600 rounded-md max-md:hidden">Publish Year</th>
@@ -69,7 +69,7 @@ const Home = () => {
                                             <AiOutlineEdit className="rext-2xl text-yellow-600" />
                                         </Link>
                                         <Link to={`/books/delete/${book._id}`}>
-                                            <MdOutlineAddBox className="rext-2xl text-red-600" />
+                                            <MdOutlineDelete className="rext-2xl text-red-600" />
                                         </Link>
                                     </div>
                                 </td>
