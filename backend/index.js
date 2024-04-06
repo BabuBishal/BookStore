@@ -3,17 +3,21 @@ import mongoose from 'mongoose'
 import { PORT, MONGODBURL} from './config.js'
 import { Book } from './models/BookModel.js'
 import BooksRoute from './routes/BooksRoute.js'
+import cors from 'cors'
 
 const app = express()
 
 app.use(express.json())
 
 app.use(cors())
-app.use(cors({
-    origin:'http://localhost:3000',
-    methoods:['POST', 'DELETE', 'PUT', 'GET'],
-    allowedHeaders: ['Content-Type']
-}))
+
+//for custom
+
+// app.use(cors({
+//     origin:'http://localhost:3000',
+//     methoods:['POST', 'DELETE', 'PUT', 'GET'],
+//     allowedHeaders: ['Content-Type']
+// }))
 
 app.get('/', (request, response) => {
     response.send("Hello")
